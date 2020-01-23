@@ -13,13 +13,13 @@ module.exports = {
                 ||response.data[2].user === login && response.data[2].password === pwd
                 )
             {
-                return res.json({message: 'Login sucessful'});
+                return res.json({logged_in: true});
             }else{
-                return res.json({message: 'Wrong password'});  
+                return res.json({logged_in: true}); 
             }
 
         }else{
-            return res.json({message: 'user does not exist'});
+            return res.json({logged_in: false});
         }
     }
 };
