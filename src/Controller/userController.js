@@ -18,7 +18,7 @@ module.exports = {
         if(ver){
             api.forEach(api => {
                 if(api.user === user && api.password === password){
-                    return res.json({logged_in: true, user_exist: true});
+                    return res.json({logged_in: true, user_exist: true, user});
                 }
             });
             return res.json({logged_in: false, user_exist: true});
