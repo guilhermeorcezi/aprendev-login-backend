@@ -20,6 +20,7 @@ module.exports = {
           return res.json({ logged_in: true, user_exists: true, user });
         }
       });
+    } else if (!userExists) {
       return res.json({ logged_in: false, user_exists: true });
     } else {
       return res.json({ logged_in: false, user_exists: false });
